@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "Arriving.DestinationsViewController.viewWillAppear (Arriving.DestinationsViewController)(Swift.Bool) -&gt; ():DestinationsViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Arriving.DestinationsViewController.init (Arriving.DestinationsViewController.Type)(coder : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSCoder&gt;) -&gt; Swift.ImplicitlyUnwrappedOptional&lt;Arriving.DestinationsViewController&gt;:DestinationsViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Arriving.DestinationCreateViewController.done (Arriving.DestinationCreateViewController)(Swift.AnyObject) -&gt; ():DestinationCreateViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Arriving.DestinationsViewController.loadDestination (Arriving.DestinationsViewController)() -&gt; ():DestinationsViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Arriving.DestinationsViewController.tableView (Arriving.DestinationsViewController)(ObjectiveC.UITableView, cellForRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ObjectiveC.UITableViewCell:DestinationsViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Arriving.DestinationsViewController.viewWillDisappear (Arriving.DestinationsViewController)(Swift.Bool) -&gt; ():DestinationsViewController.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
