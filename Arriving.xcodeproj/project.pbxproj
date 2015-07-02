@@ -44,7 +44,7 @@
 		DB31171B1B3EA5360063349F /* ArrivingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArrivingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3117201B3EA5360063349F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB3117211B3EA5360063349F /* ArrivingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivingTests.swift; sourceTree = "<group>"; };
-		DB54EB6D1B4533DD005A2F38 /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlarmViewController.swift; path = ../AlarmViewController.swift; sourceTree = "<group>"; };
+		DB54EB6D1B4533DD005A2F38 /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		DB54EB6F1B454C9C005A2F38 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		DBF485051B3EB2F00097F5B0 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DBF485081B3EB45B0097F5B0 /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
