@@ -2,4 +2,4 @@
 remind you when you reach the destination
 
 # TODO
-*change the mechanism of get the destination
+*change the mechanism of get the destination from the map
