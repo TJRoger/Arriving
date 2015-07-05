@@ -127,9 +127,12 @@
                     <connections>
                         <outlet property="mapView" destination="S23-Ig-jE2" id="EYg-E9-ohF"/>
                         <outlet property="targetView" destination="VML-v0-7uF" id="7za-Dd-bD4"/>
+                        <segue destination="9v2-Vl-RBI" kind="unwind" identifier="Unwind Map" unwindAction="unwindToDestinationCreateMenu:" id="sK6-S6-Ipj"/>
+                        <segue destination="9v2-Vl-RBI" kind="unwind" identifier="Unwind MapView" unwindAction="getRegionFromMap:" id="W0A-Cy-I2g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="9v2-Vl-RBI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2793" y="1095"/>
         </scene>

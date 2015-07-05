@@ -10,7 +10,13 @@ import UIKit
 
 class DestinationsViewController: UITableViewController {
     
-    var destinations: [Destination] = []
+    var destinations: [Destination]? {
+        didSet {
+            if destinations != nil {
+                saveDestination()
+            }
+        }
+    }
     
     required init!(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
@@ -32,13 +38,13 @@ class DestinationsViewController: UITableViewController {
         if let object: AnyObject = NSUserDefaults.standardUserDefaults().objectForKey("destinations") {
             let dst: AnyObject? = NSKeyedUnarchiver.unarchiveObjectWithData(object as! NSData)
             if let dst: AnyObject = dst {
-                destinations = dst as! [Destination]
+                destinations = dst as? [Destination]
             }
         }
     }
     func saveDestination() {
-        if destinations.count != 0 {
-            let data = NSKeyedArchiver.archivedDataWithRootObject(destinations)
+        if destinations!.count != 0 {
+            let data = NSKeyedArchiver.archivedDataWithRootObject(destinations!)
             NSUserDefaults.standardUserDefaults().setObject(data, forKey: "destinations")
         }
     }
@@ -55,12 +61,12 @@ class DestinationsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return destinations.count
+        return destinations?.count ?? 0
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Destination", forIndexPath: indexPath) as! UITableViewCell
-        let destination = destinations[indexPath.row] as Destination
+        let destination = destinations![indexPath.row] as Destination
         cell.textLabel!.text = destination.title
         return cell
     }

@@ -10,7 +10,7 @@ import UIKit
 import MediaPlayer
 import CoreLocation
 
-class DestinationCreateViewController: UITableViewController, MPMediaPickerControllerDelegate, MapViewControllerDelegate, UITextFieldDelegate {
+class DestinationCreateViewController: UITableViewController, MPMediaPickerControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var titleTextField: UITextField!
     
@@ -80,9 +80,9 @@ class DestinationCreateViewController: UITableViewController, MPMediaPickerContr
     
     //MARK: - MapViewControllerDelegate
     func returnedRegion(region: CLCircularRegion) {
-        self.region = region
-        mapLabel.text = "Destination Region Selected"
-        self.navigationController!.popViewControllerAnimated(true)
+//        self.region = region
+//        mapLabel.text = "Destination Region Selected"
+//        self.navigationController!.popViewControllerAnimated(true)
     }
     
     //MARK: - MPMediaPickerControllerDelegate
@@ -97,6 +97,7 @@ class DestinationCreateViewController: UITableViewController, MPMediaPickerContr
             
         }
     }
+    
     func mediaPickerDidCancel(mediaPicker: MPMediaPickerController!) {
         self.dismissViewControllerAnimated(true){
             
@@ -111,24 +112,31 @@ class DestinationCreateViewController: UITableViewController, MPMediaPickerContr
         textField.resignFirstResponder()
     }
     
+    @IBAction func getRegionFromMap(sender: UIStoryboardSegue){
+        if self.region != nil {
+            self.mapLabel.text = "Destination Region Selected"
+            
+        }
+    }
+    
     //MARK: - Prepare For Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         //unwrap the Destination ViewController if it's embled in navigation controller
-                var destination = segue.destinationViewController as? UIViewController
-                if let navCon = destination as? UINavigationController {
-                    destination = navCon.visibleViewController
-                }
-                if let hvc = destination as? MapViewController {
-                    if let identifier = segue.identifier {
-                        switch identifier {
-                        case "Show Map":
-                            hvc.delegate = self
-                        default:
-                            return
-                        }
-                        
-                    }
-                }
-
+//        var dst = segue.destinationViewController as? UIViewController
+//        if let navCon = dst as? UINavigationController {
+//            dst = navCon.visibleViewController
+//        }
+//        if let hvc = dst as? MapViewController {
+//            if let identifier = segue.identifier {
+//                switch identifier {
+//                case "Show Map":
+//                    hvc.delegate = self;
+//                    
+//                default:
+//                    return
+//                }
+//            }
+//        }
+//
     }
 }

@@ -66,8 +66,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         destinations.updateValue(destination, forKey: destination.region.identifier)
         locationManager.startMonitoringForRegion(destination.region)
         
-        destinationViewController.destinations.append(destination)
-        destinationViewController.saveDestination()
+        destinationViewController.destinations?.append(destination)
+//        destinationViewController.saveDestination()
         destinationViewController.tableView.reloadData()
     }
     
